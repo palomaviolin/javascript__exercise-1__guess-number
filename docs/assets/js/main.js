@@ -1,1 +1,1 @@
-"use strict";function getRandomNumber(e){return Math.ceil(Math.random()*e)}console.log("> "+getRandomNumber(100));
+"use strict";function getRandomNumber(t){return Math.ceil(Math.random()*t)}console.log("> "+getRandomNumber(100));let button=document.getElementById("btn"),count=0;button.onclick=function(){count+=1,document.querySelector("#counter").innerHTML=count,counter.innerHTML="Number of attempts: "+count};

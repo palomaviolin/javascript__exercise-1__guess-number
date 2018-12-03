@@ -5,10 +5,18 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
   }
   
-
 console.log('> ' + getRandomNumber(100));
 
 
+// contador de intentos:
+let button = document.getElementById("btn"),
+  count = 0;
+button.onclick = function() {
+  count += 1;
+  let counterElement = document.querySelector('#counter');
+  counterElement.innerHTML = count;
+  counter.innerHTML = "Number of attempts: " + count;
+};
 
 
 
@@ -39,15 +47,5 @@ if ( number > 50 ){
   console.log('¡HAS GANADO, CAMPEONA!');
 } else {
   console.log('Sigue intentándolo'); 
-
-  
-
-// contador de intentos:
-let counter = document.getElementById("btn"),
-  count = 0;
-counter.onclick = function() {
-  count += 1;
-  counter.innerHTML = "Click me: " + count;
-};
 
 */
