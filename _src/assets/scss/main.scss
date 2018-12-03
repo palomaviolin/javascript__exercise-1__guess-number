@@ -1,6 +1,22 @@
 @import 'core/settings';
 
 body {
-	background: url('../images/logo-adalab-80px.png') center center no-repeat $color-white;
+	background-color: lightgray;
 	height: 100vh;
+}
+
+.container_data {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 80px;
+}
+
+.clue_box {
+	border: 1px solid blue;
+	border-radius: 4px;
+	height: 40px;
+	color: blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
