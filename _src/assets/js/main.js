@@ -18,10 +18,6 @@ button.onclick = function() {
   counter.innerHTML = "Number of attempts: " + count;
 };
 
-
-
-
-
 /*
 
 // Para loguear el botón prueba (que aumente el número de veces que le doy al botón en la consola).
