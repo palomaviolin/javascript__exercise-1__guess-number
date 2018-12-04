@@ -1,47 +1,67 @@
 'use strict';
 
+let feedbackElem = document.body.querySelector('.feedback');
+let counterElem = document.body.querySelector('#counter');
+let counter = 0;
+let randomNumber;
+let testButton;
+
+// Toda la lógica de inicialización en una única función que LUEGO HAY QUE LLAMAR
+function init() {
+    counterElem.innerText = counter;
+    randomNumber = getRandomNumber(100);
+
+    // Imprimimos el número aleatorio generado en consola
+    console.log(`El número aleatorio es: ${randomNumber}`);
+
+    // Asociamos al botón la función que se encarga de comprobar el número del usuario
+    testButton = document.body.querySelector('#test-button');
+    testButton.addEventListener('click', testGuess);
+}
+
 // Función que genera un número aleatorio hasta un máximo dado
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
-  }
-  
-console.log('> ' + getRandomNumber(100));
+}
 
+function incrementCounter() {
+    counter += 1;
+    counterElem.innerText = counter;
+}
+
+function testGuess() {
+    // Obtenemos el número introducido por el usuario
+    let inputElem = document.body.querySelector('#number-input');
+    // Al ser el input de tipo number, no es necesario hacer parseInt. El || 0 es por si se pulsa el botón sin haber escrito nada
+    let userNumber = inputElem.value || 0;  // La propiedad 'value' de un input contiene el valor introducido por el usuario
+
+    // Comparamos el número del jugador con el generado
+    if (userNumber > randomNumber) {
+        feedbackElem.innerText = 'Demasiado alto'
+    } else if (userNumber < randomNumber) {
+        feedbackElem.innerText = 'Demasiado bajo'
+    } else {
+        feedbackElem.innerText = '¡HAS GANADO, CAMPEONA!'
+    }
+    incrementCounter();  // Importante: independientemente del caso, aumentar el contador de intentos
+}
+
+// LLAMAMOS A LA FUNCIÓN DE INICIALIZACIÓN
+init();
+
+
+
+
+/* Versión antigua del contador:
 
 // contador de intentos:
-let button = document.getElementById("btn"),
+let button = document.getElementById("test-button"),
   count = 0;
 button.onclick = function() {
   count += 1;
   let counterElement = document.querySelector('#counter');
   counterElement.innerHTML = count;
-  counter.innerHTML = "Number of attempts: " + count;
+  counter.innerHTML = "Número de intentos: " + count;
 };
-
-/*
-
-// Para loguear el botón prueba (que aumente el número de veces que le doy al botón en la consola).
-
-const button = document.body.querySelector('#btn');
-
-function method(event) {
-    console.log(event);
-}
-
-button.addEventListener('click', method);
-
-
-//
-
-let number = '';
-
-if ( number > 50 ){
-  console.log('Demasiado alto'); 
-} else if ( number <= 50) {
-  console.log('Demasiado bajo'); 
-} else if ( number === NÚMERO RANDOM ) {
-  console.log('¡HAS GANADO, CAMPEONA!');
-} else {
-  console.log('Sigue intentándolo'); 
 
 */

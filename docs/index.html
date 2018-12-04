@@ -5,39 +5,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>e-s2-evaluacion-intermedia-palomaviolin</title>
-        <link rel="icon" href="favicon.png"
-        />
+        <title>Adivina el número</title>
+        <link rel="icon" href="favicon.png" />
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
     
-    <body>
-        <header>
-             <h1>Adivina el número</h1>
+    <body class="body-styles">
+        <header class="header">
+            <p class="counter_position"><span id="counter" class="counter_color"></span>
 
-            <div id="counter">O</div>
+            </p>
+             <h1 class="title-h1">Adivina el número</h1>
+
+            <!-- <div id="counter" class="red">Number of attempts: 0</div> -->
         </header>
         <main class="container_data">
             <div>
-                 <h2>Introduce aquí tu múmero</h2>
+                 <h2 class="title-h2">Introduce aquí tu número</h2>
 
                 <div>
-                    <input id="number-player" type="number">
+                    <input id="number-input" type="number" class="input-styles">
                 </div>
                 <div>
-                    <button id="btn">Prueba</button>
+                    <button id="test-button" class="button-styles">Prueba</button>
                 </div>
+                <p class="feedback"></p>
             </div>
         </main>
         <footer>
-            <div class="clue_box" id="clue">Escribe un número y dale a "Prueba".</div>
+            <p class="try_box" id="clue">Escribe un número y dale a <em class="em-margin">Prueba</em>.</p>
         </footer>
         <script type="text/javascript" src="assets/js/main.js"></script>
     </body>
 
 </html>
-<!-- <div class="page">
-  <header class="page__header">Header</header>
-  <main class="page__main">Main</main>
-</div>
--->

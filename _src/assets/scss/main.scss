@@ -1,28 +1,69 @@
-@import 'core/settings';
+@import "core/variables";
 
-body {
-	background-color: lightgray;
-	height: 100vh;
+.body-styles {
+  background-color: $color_body-background;
+  font-family: $font-family_principal;
+  height: 100vh;
+  margin: 25px;
+}
+
+.title-h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.counter_position {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.counter_color {
+  font-size: 40px;
+  color: $color_counter;
+  font-weight: bold;
 }
 
 .container_data {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 
-.clue_box {
-	border: 1px solid blue;
-	border-radius: 4px;
-	height: 40px;
-	color: blue;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.title-h2 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.red {
-	font-size: 40px;
-	color: red;
-	font-weight: bold;
+.try_box {
+  border: 1px solid $color_try-box;
+  border-radius: 4px;
+  height: 40px;
+  color: $color_try-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-styles,
+.button-styles {
+  width: 200px;
+}
+
+.input-styles {
+  height: 25px;
+}
+
+.button-styles {
+  height: 25px;
+  border-radius: 6px;
+  margin: 20px 3px;
+  font-size: 14px;
+}
+
+.em-margin {
+  margin-left: 6px;
 }
