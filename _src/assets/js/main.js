@@ -48,20 +48,3 @@ function testGuess() {
 
 // LLAMAMOS A LA FUNCIÓN DE INICIALIZACIÓN
 init();
-
-
-
-
-/* Versión antigua del contador:
-
-// contador de intentos:
-let button = document.getElementById("test-button"),
-  count = 0;
-button.onclick = function() {
-  count += 1;
-  let counterElement = document.querySelector('#counter');
-  counterElement.innerHTML = count;
-  counter.innerHTML = "Número de intentos: " + count;
-};
-
-*/
